@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restraunt_tests",
+  "info": {
+    "singularName": "restraunt-test",
+    "pluralName": "restraunt-tests",
+    "displayName": "restraunt-test",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "testComponent": {
+      "displayName": "test-component",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.test-component"
+    },
+    "dynamicTestComponent": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.dynamic-zone-field"
+      ]
+    }
+  }
+}

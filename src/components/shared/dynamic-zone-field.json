@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_dynamic_zone_fields",
+  "info": {
+    "displayName": "dynamicZoneField",
+    "icon": "check"
+  },
+  "options": {},
+  "attributes": {
+    "jsonTestBlock": {
+      "type": "blocks"
+    }
+  }
+}

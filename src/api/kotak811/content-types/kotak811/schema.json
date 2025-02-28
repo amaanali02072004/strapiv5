@@ -1,0 +1,14 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kotak811s",
+  "info": {
+    "singularName": "kotak811",
+    "pluralName": "kotak811s",
+    "displayName": "Kotak811",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {}
+}

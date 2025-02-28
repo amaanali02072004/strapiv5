@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_new_category_headers",
+  "info": {
+    "displayName": "header",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "links": {
+      "type": "json"
+    }
+  }
+}
