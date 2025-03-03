@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "footers",
+  "info": {
+    "singularName": "footer",
+    "pluralName": "footers",
+    "displayName": "footer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "section4": {
+      "type": "json"
+    },
+    "section1": {
+      "type": "json"
+    },
+    "section2": {
+      "type": "json"
+    },
+    "section3": {
+      "type": "json"
+    }
+  }
+}

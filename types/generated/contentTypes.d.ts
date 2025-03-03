@@ -502,6 +502,38 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFooterFooter extends Struct.CollectionTypeSchema {
+  collectionName: 'footers';
+  info: {
+    description: '';
+    displayName: 'footer';
+    pluralName: 'footers';
+    singularName: 'footer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::footer.footer'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    section1: Schema.Attribute.JSON;
+    section2: Schema.Attribute.JSON;
+    section3: Schema.Attribute.JSON;
+    section4: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -534,13 +566,13 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiKotak811Kotak811 extends Struct.CollectionTypeSchema {
-  collectionName: 'kotak811s';
+export interface ApiHeaderHeader extends Struct.CollectionTypeSchema {
+  collectionName: 'headers';
   info: {
     description: '';
-    displayName: 'Kotak811';
-    pluralName: 'kotak811s';
-    singularName: 'kotak811';
+    displayName: 'header';
+    pluralName: 'headers';
+    singularName: 'header';
   };
   options: {
     draftAndPublish: true;
@@ -549,15 +581,58 @@ export interface ApiKotak811Kotak811 extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    headerLinks: Schema.Attribute.Component<'new-category.header', true>;
+    headerButton: Schema.Attribute.JSON;
+    headerLinks: Schema.Attribute.JSON;
+    headerLogo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::kotak811.kotak811'
+      'api::header.header'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    testBlock: Schema.Attribute.Blocks;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiLandingSectionLandingSection
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'landing_sections';
+  info: {
+    description: '';
+    displayName: 'Home';
+    pluralName: 'landing-sections';
+    singularName: 'landing-section';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    animationSection: Schema.Attribute.JSON;
+    banner1: Schema.Attribute.JSON;
+    banner2: Schema.Attribute.JSON;
+    banner3: Schema.Attribute.JSON;
+    cardElementSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    creditSection1: Schema.Attribute.JSON;
+    creditSection2: Schema.Attribute.JSON;
+    landingSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::landing-section.landing-section'
+    > &
+      Schema.Attribute.Private;
+    negativeContentSection: Schema.Attribute.JSON;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1110,8 +1185,10 @@ declare module '@strapi/strapi' {
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
+      'api::footer.footer': ApiFooterFooter;
       'api::global.global': ApiGlobalGlobal;
-      'api::kotak811.kotak811': ApiKotak811Kotak811;
+      'api::header.header': ApiHeaderHeader;
+      'api::landing-section.landing-section': ApiLandingSectionLandingSection;
       'api::restraunt-test.restraunt-test': ApiRestrauntTestRestrauntTest;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

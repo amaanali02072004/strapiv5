@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * kotak811 service
+ * header service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::kotak811.kotak811');
+module.exports = createCoreService('api::header.header');

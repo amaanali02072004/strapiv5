@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * kotak811 router
+ * footer router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::kotak811.kotak811');
+module.exports = createCoreRouter('api::footer.footer');

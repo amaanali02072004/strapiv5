@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "landing_sections",
+  "info": {
+    "singularName": "landing-section",
+    "pluralName": "landing-sections",
+    "displayName": "Home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "landingSection": {
+      "type": "json"
+    },
+    "cardElementSection": {
+      "type": "json"
+    },
+    "banner1": {
+      "type": "json"
+    },
+    "banner2": {
+      "type": "json"
+    },
+    "banner3": {
+      "type": "json"
+    },
+    "creditSection1": {
+      "type": "json"
+    },
+    "animationSection": {
+      "type": "json"
+    },
+    "negativeContentSection": {
+      "type": "json"
+    },
+    "creditSection2": {
+      "type": "json"
+    }
+  }
+}

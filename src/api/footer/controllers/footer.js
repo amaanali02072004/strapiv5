@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * kotak811 controller
+ * footer controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::kotak811.kotak811');
+module.exports = createCoreController('api::footer.footer');
