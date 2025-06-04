@@ -1,7 +1,6 @@
 module.exports = [
   'strapi::logger',
   'strapi::errors',
-  'strapi::security',
   'strapi::cors',
   'strapi::poweredBy',
   'strapi::query',
@@ -9,4 +8,12 @@ module.exports = [
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
+  'strapi::security',
+  {
+    name: 'strapi::cors',
+    config: {
+      // origin: ['https://your-frontend-domain.com'], // or '*' for all
+      origin: ['*'],
+    },
+  },
 ];
