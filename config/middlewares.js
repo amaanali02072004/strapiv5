@@ -13,7 +13,8 @@ module.exports = [
     name: 'strapi::cors',
     config: {
       // origin: ['https://your-frontend-domain.com'], // or '*' for all
-      origin: ['*'],
+      origin: '*',
+      headers: '*',
     },
   },
 ];
