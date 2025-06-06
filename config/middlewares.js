@@ -11,8 +11,8 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['http://localhost:3000', 'https://kotak-home.netlify.app/'], // or '*' for all
-      // origin: '*',
+      // origin: ['http://localhost:3000', 'https://kotak-home.netlify.app/'], // or '*' for all
+      origin: '*',
       headers: '*',
       credentials: true,
     },
